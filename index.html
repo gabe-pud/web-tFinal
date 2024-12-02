@@ -15,7 +15,7 @@
         crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body id="body-bootstrap-override">
     <!-- nav -->
     <header class="header">
         <nav class="nav">
@@ -32,7 +32,7 @@
 
     <!-- carrossel -->
     <section id="carrossel">
-        <div id="carouselExampleIndicators" class="carousel carousel-dark slide">
+        <div id="carouselExampleIndicators" class="carousel carousel-dark slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
                     aria-current="true" aria-label="Slide 1"></button>
@@ -63,11 +63,49 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
+    </section>
 
+    <!-- produtos -->
+    <section id="produtos">
+        <div>
+            <h1>produtos</h1>
+            <div class="lista-produtos">
+                <div class="card" style="width: 18rem;">
+                    <img src="imagens\3bolas.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+            </div>
+        </div>
     </section>
-    <section id="conteudo">
-        
+
+    <!-- sobre -->
+    <section id="sobre">
+        <div>
+            <h1>Os melhores sorvetes da região</h1>
+            <p>
+                Qualidade incomparável em cada colherada
+                Na [crepito], cada sorvete é produzido com ingredientes selecionados e receitas cuidadosamente
+                elaboradas para garantir o sabor e a textura perfeitos.
+                Nossa missão é oferecer uma experiência refrescante e deliciosa, que transforma momentos simples em
+                memorias especiais.
+                Descubra o sabor da excelência!
+            </p>
+            <p>
+                Além da qualidade excepcional, oferecemos uma ampla variedade de sabores para agradar todos os paladares
+                . Desde os clássicos que voçê já ama até combinações exclusivas e inovadoras, nossos sorvetes são feitos
+                para surpreender.
+                Seja para um momento de descontração, uma comemoração especial ou apenas pa se refrescar, aqui você
+                sempre encontra o sabor perfeito para qualquer ocasião!
+            </p>
+        </div>
     </section>
+
+    <!-- footer -->
+    <footer></footer>
 </body>
 
 </html>
