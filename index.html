@@ -40,8 +40,6 @@
     <div id="header-space">
 
     </div>
-    <!-- Button trigger modal -->
-
 
     <!-- Modal -->
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
@@ -56,8 +54,7 @@
                     <form class="row g-3">
                         <div class="mb-3">
                             <label for="ControlInput1" class="form-label">E-mail</label>
-                            <input type="email" class="form-control" id="ControlInput1"
-                                placeholder="nome@exemplo.com">
+                            <input type="email" class="form-control" id="ControlInput1" placeholder="nome@exemplo.com">
                         </div>
                         <div class="col-auto">
                             <label for="inputPassword2" class="visually-hidden">Senha</label>
@@ -79,7 +76,12 @@
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
-            ...
+            <div id="offcanvas-lista">
+            </div>
+            <div id="offcanvas-resultado">
+                <h3>Preço:</h3>
+                <button type="submit" class="btn btn-primary mb-3">finalizar compra</button>
+            </div>
         </div>
     </div>
 
@@ -228,8 +230,8 @@
                       </div>
                     </div>
                 </div>
-              </div>
             </div>
+        </div>
         </div>
     </section>
 
