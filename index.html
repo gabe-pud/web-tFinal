@@ -29,10 +29,35 @@
                         aria-controls="offcanvasRight"><img
                             src="imagens\shopping_cart_33dp_E8EAED_FILL0_wght400_GRAD0_opsz40.svg" alt=""></button>
                 </li>
+                <li> <button class="btn" type="button">login</button></li>
             </ul>
         </nav>
     </header>
-    <main class="hero"></main>
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        Launch static backdrop modal
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Understood</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- carrinho -->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
@@ -78,7 +103,7 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-    </section>  
+    </section>
 
     <!-- sobre -->
     <section id="sobre">

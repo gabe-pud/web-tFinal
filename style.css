@@ -27,10 +27,12 @@ a {
 
 .header {
     background: #5B9CF0;
-    padding-inline: 16px;
-    position: relative;
+    padding-left: 16px;
+    padding-right: 32px;
+    position: fixed;
     z-index: 1;
     overflow: visible;
+    width: 100vw;
 }
 
 .nav {
