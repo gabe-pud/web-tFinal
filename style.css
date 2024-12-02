@@ -108,13 +108,26 @@ a {
 }
 
 
-/* produtos */
+/* produtos 
 #produtos {
     background-color: #fff6e4;
 }
 
 .lista-produtos {
     padding: 15px;
+    display: flex;
+    gap: 32px;
+}
+/*  
+
+/*  */
+.card-body {
+    min-height: 175px;
+}
+
+.card-img, .card-img-top {
+    height: 250px;
+    object-fit: cover;
 }
 
 /* sobre */
