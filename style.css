@@ -114,20 +114,17 @@ a {
     object-position: 50% 0;
 }
 
+/* produtos */
 
-/* produtos 
 #produtos {
-    background-color: #fff6e4;
+    padding-inline: 16px;
 }
 
-.lista-produtos {
-    padding: 15px;
-    display: flex;
-    gap: 32px;
+.tituloproduto{
+    text-align: center;
+    padding-bottom: 24px;
 }
-/*  
 
-/*  */
 .card-body {
     min-height: 175px;
 }
@@ -137,11 +134,20 @@ a {
     object-fit: cover;
 }
 
+
 /* sobre */
 #sobre {
     background-color: #fff6e4;
 }
 
+/* footer */
+#footer {
+    padding: 20px;
+    background-color: #5B9CF0;
+    max-width: 1280px;
+    display: flex;
+    margin-top: 30px ;
+}
 
 /* MEDIA */
 @media (max-width: 750px) {
