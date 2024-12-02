@@ -23,12 +23,27 @@
             <button class="hamburger"></button>
             <ul class="nav-list">
                 <li><a href="./index.html">Home</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Produtos</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
+                        aria-controls="offcanvasRight"><img
+                            src="imagens\shopping_cart_33dp_E8EAED_FILL0_wght400_GRAD0_opsz40.svg" alt=""></button>
+                </li>
             </ul>
         </nav>
     </header>
     <main class="hero"></main>
+
+    <!-- carrinho -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasLabel">Seu carrinho</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            ...
+        </div>
+    </div>
 
     <!-- carrossel -->
     <section id="carrossel">
@@ -63,24 +78,7 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-    </section>
-
-    <!-- produtos -->
-    <section id="produtos">
-        <div>
-            <h1>produtos</h1>
-            <div class="lista-produtos">
-                <div class="card" style="width: 18rem;">
-                    <img src="imagens\3bolas.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                  </div>
-            </div>
-        </div>
-    </section>
+    </section>  
 
     <!-- sobre -->
     <section id="sobre">
@@ -104,8 +102,30 @@
         </div>
     </section>
 
+    <!-- produtos -->
+    <section id="produtos">
+        <div>
+            <h1>produtos</h1>
+            <div class="lista-produtos">
+                <div class="card" style="width: 18rem;">
+                    <img src="imagens\3bolas.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
     <!-- footer -->
-    <footer></footer>
+    <footer>
+        <!-- cpyright e menu secundário com redes sociais -->
+    </footer>
 </body>
 
 </html>
