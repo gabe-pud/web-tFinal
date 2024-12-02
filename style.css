@@ -34,6 +34,9 @@ a {
     overflow: visible;
     width: 100vw;
 }
+#header-space {
+    height: 70px;
+}
 
 .nav {
     position:static;
@@ -86,6 +89,10 @@ a {
     transition: 0.3s;
 }
 
+/* modal */
+.modal .row {
+    justify-content: space-between;
+}
 
 /* carrossel */
 #carrossel {
