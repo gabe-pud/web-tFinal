@@ -40,8 +40,6 @@
     <div id="header-space">
 
     </div>
-    <!-- Button trigger modal -->
-
 
     <!-- Modal -->
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
@@ -56,8 +54,7 @@
                     <form class="row g-3">
                         <div class="mb-3">
                             <label for="ControlInput1" class="form-label">E-mail</label>
-                            <input type="email" class="form-control" id="ControlInput1"
-                                placeholder="nome@exemplo.com">
+                            <input type="email" class="form-control" id="ControlInput1" placeholder="nome@exemplo.com">
                         </div>
                         <div class="col-auto">
                             <label for="inputPassword2" class="visually-hidden">Senha</label>
@@ -79,7 +76,12 @@
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
-            ...
+            <div id="offcanvas-lista">
+            </div>
+            <div id="offcanvas-resultado">
+                <h3>Preço:</h3>
+                <button type="submit" class="btn btn-primary mb-3">finalizar compra</button>
+            </div>
         </div>
     </div>
 
@@ -146,66 +148,72 @@
             <h1>produtos</h1>
             <div class="row row-cols-1 row-cols-md-3 g-4">
                 <div class="col">
-                  <div class="card">
-                    <img src="./imagens/3bolas.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Mini Napolitano</h5>
-                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col">
-                  <div class="card">
-                    <img src="./imagens/9bolas.webp" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Chocolate, Morango & Pistache </h5>
-                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col">
-                  <div class="card">
-                    <img src="./imagens/BAUNILHA.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Baunilha C/ Chocolate</h5>
-                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col">
-                  <div class="card">
-                    <img src="./imagens/SORVETE NAPOLITANO 2L.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">NAPOLITANO 2L</h5>
-                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col">
                     <div class="card">
-                      <img src="./imagens/Sorvete-Expresso-Caramelizado.jpg" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title">Expresso Caramelizado</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                      </div>
+                        <img src="./imagens/3bolas.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Mini Napolitano</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
+                                to additional content. This content is a little bit longer.</p>
+                        </div>
                     </div>
                 </div>
 
                 <div class="col">
                     <div class="card">
-                      <img src="./imagens/trescasquinhas.png" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title">Laranja, Abacaxi & Morango</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                      </div>
+                        <img src="./imagens/9bolas.webp" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Chocolate, Morango & Pistache </h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
+                                to additional content. This content is a little bit longer.</p>
+                        </div>
                     </div>
                 </div>
-              </div>
+
+                <div class="col">
+                    <div class="card">
+                        <img src="./imagens/BAUNILHA.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Baunilha C/ Chocolate</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
+                                to additional content.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card">
+                        <img src="./imagens/SORVETE NAPOLITANO 2L.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">NAPOLITANO 2L</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
+                                to additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card">
+                        <img src="./imagens/Sorvete-Expresso-Caramelizado.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Expresso Caramelizado</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
+                                to additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card">
+                        <img src="./imagens/trescasquinhas.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Laranja, Abacaxi & Morango</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
+                                to additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
         </div>
     </section>
 
