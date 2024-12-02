@@ -25,19 +25,23 @@
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#produtos">Produtos</a></li>
+                <li> <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                        style="font-size: 21px; color: white; padding: 0px;">
+                        Login
+                    </button>
+                </li>
                 <li><button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
-                        aria-controls="offcanvasRight"><img
+                        aria-controls="offcanvasRight" style="font-size: 21px; color: white; padding: 0px;"><img
                             src="imagens\shopping_cart_33dp_E8EAED_FILL0_wght400_GRAD0_opsz40.svg" alt=""></button>
                 </li>
-                <li> <button class="btn" type="button">login</button></li>
             </ul>
         </nav>
     </header>
+    <div id="header-space">
 
+    </div>
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-        Launch static backdrop modal
-    </button>
+
 
     <!-- Modal -->
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
@@ -45,15 +49,24 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Login</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Understood</button>
+                    <form class="row g-3">
+                        <div class="mb-3">
+                            <label for="ControlInput1" class="form-label">E-mail</label>
+                            <input type="email" class="form-control" id="ControlInput1"
+                                placeholder="nome@exemplo.com">
+                        </div>
+                        <div class="col-auto">
+                            <label for="inputPassword2" class="visually-hidden">Senha</label>
+                            <input type="password" class="form-control" id="inputPassword2" placeholder="Senha">
+                        </div>
+                        <div class="col-auto">
+                            <button type="submit" class="btn btn-primary mb-3">Confirmar</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
