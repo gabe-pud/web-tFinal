@@ -144,9 +144,17 @@ a {
 #footer {
     padding: 20px;
     background-color: #5B9CF0;
-    max-width: 1280px;
+    margin-top: 30px;
+    text-align: center;
+    text-decoration: none;
+}
+
+#footer ul {
     display: flex;
-    margin-top: 30px ;
+    gap: 32px;
+    text-decoration: none;
+    align-items: center;
+    
 }
 
 /* MEDIA */
