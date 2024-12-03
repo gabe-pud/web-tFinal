@@ -28,12 +28,12 @@ function validateLogin(event) {
 
         usuarioLogado = true;  // Marca como logado
         alert("Login bem-sucedido!");
-        document.getElementById("btnCarrinho").disabled = false; // Habilita o botão do carrinho
         var myModalEl = document.getElementById('staticBackdrop');
         var modal = bootstrap.Modal.getInstance(myModalEl)
         modal.hide();
-        var login = document.getElementById("btnLoginLogout");
-        login.innerText = "Logout"
+        setTimeout(() => {
+            document.location.href = './vendas.html',true; // Redireciona para a página de vendas
+        }, 1000); // O redirecionamento ocorre após 1 segundo para que a mensagem de "Sucesso" seja visível
     } else {
         message.style.color = 'red';
         message.textContent = 'Usuário ou senha inválidos'; // Exibe mensagem de erro
@@ -109,7 +109,7 @@ function atualizarCarrinho() {
     carrinho.forEach(item => {
         let li = document.createElement('li');
         li.innerHTML = `
-            ${item.produto} - R$${item.preco.toFixed(2)} x 
+            ${item.produto} - R$${item.preco.toFixed(2)} 
             <input type="number" value="${item.quantidade}" min="1" 
                    onchange="alterarQuantidade('${item.produto}', this.value)" 
                    style="width: 50px; margin-right: 10px;">

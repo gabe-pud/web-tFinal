@@ -23,13 +23,15 @@
             <a href="./index.html"><img class="logo" src="./imagens/crepito logo.webp" alt=""></a>
             <button class="hamburger"></button>
             <ul class="nav-list">
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#produtos">Produtos</a></li>
-                <li> <button id="btnLoginLogout" type="button" class="btn" data-bs-toggle="modal"
-                        data-bs-target="#staticBackdrop"
-                        style="font-size: 21px; color: white; padding: 0px;"><span>Login</span>
+                <li> <p>Gabriel</p></li>
+                <li> <button id="btnLoginLogout" type="button" class="btn"
+                        style="font-size: 21px; color: white; padding: 0px;"><span>logout</span>
                     </button>
+                </li>
+                <li><button id="btnCarrinho" onclick="abrirCarrinho()" class="btn" type="button"
+                        data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvasRight"
+                        style="font-size: 21px; color: white; padding: 0px;border: none;"><img
+                            src="imagens\shopping_cart_33dp_E8EAED_FILL0_wght400_GRAD0_opsz40.svg" alt=""></button>
                 </li>
             </ul>
         </nav>
@@ -37,36 +39,6 @@
     <div id="header-space">
 
     </div>
-
-    <!-- Modal -->
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Login</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form class="row g-3" id="loginForm" onsubmit="validateLogin(event), toggleLoginLogout()">
-                        <div class="mb-3">
-                            <label for="ControlInput1" class="form-label">E-mail</label>
-                            <input type="email" class="form-control" id="ControlInput1" placeholder="nome@exemplo.com">
-                        </div>
-                        <div class="col-auto">
-                            <label for="inputPassword2" class="visually-hidden">Senha</label>
-                            <input type="password" class="form-control" id="inputPassword2" placeholder="Senha">
-                        </div>
-                        <div class="col-auto">
-                            <button type="submit" class="btn btn-primary mb-3">Confirmar</button>
-                        </div>
-                        <p id="message" style="text-align:center; color:red;"></p> <!-- Mensagem de erro ou sucesso -->
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
 
     <!-- carrinho -->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
@@ -84,63 +56,6 @@
         </div>
     </div>
 
-    <!-- carrossel -->
-    <section id="carrossel">
-        <div id="carouselExampleIndicators" class="carousel carousel-dark slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="imagens\trescasquinhas.png" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="imagens\9bolas.webp" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="imagens\3bolas.jpg" class="d-block w-100" alt="...">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-    </section>
-
-    <!-- sobre -->
-    <section id="sobre">
-        <div>
-            <h1 class="titulo-sobre">Os melhores sorvetes da região</h1>
-            <p>
-                Qualidade incomparável em cada colherada
-                Na <span style="color: #f0bc5b; font-weight: 800; font-size: 16px;">Crepito</span>, cada sorvete é
-                produzido com ingredientes selecionados e receitas cuidadosamente
-                elaboradas para garantir o sabor e a textura perfeitas.
-                Nossa missão é oferecer uma experiência refrescante e deliciosa, que transforma momentos simples em
-                memorias especiais.
-                Descubra o sabor da excelência!
-            </p>
-            <p>
-                Além da qualidade excepcional, oferecemos uma ampla variedade de sabores para agradar todos os paladares
-                . Desde os clássicos que voçê já ama até combinações exclusivas e inovadoras, nossos sorvetes são feitos
-                para surpreender.
-                Seja para um momento de descontração, uma comemoração especial ou apenas para se refrescar, aqui você
-                sempre encontra o sabor perfeito para qualquer ocasião!
-            </p>
-        </div>
-    </section>
 
     <!-- produtos -->
     <section id="produtos">
@@ -157,8 +72,7 @@
                             </div>
                             <p class="card-text">Delicioso mini sorvete napolitano de chocolate cremoso, baunilha suave
                                 e morango refrescante!</p>
-                            <button id="item1" type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#staticBackdrop"
+                            <button id="item1" type="button" class="btn btn-primary"
                                 style="font-size: 19px; color: rgb(255, 255, 255);background-color: #5B9CF0;border-color: #5B9CF0; padding: 5px;">
                                 COMPRAR
                             </button>
@@ -176,8 +90,7 @@
                             </div>
                             <p class="card-text">Seja Chocolate, Morango OU Pistache, perfeito para os apaixonados por
                                 sabores clássicos e ricos.</p>
-                            <button id="item2" type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#staticBackdrop"
+                            <button id="item2" type="button" class="btn btn-primary"
                                 style="font-size: 19px; color: rgb(255, 255, 255);background-color: #5B9CF0;border-color: #5B9CF0; padding: 5px;">
                                 COMPRAR
                             </button>
@@ -195,8 +108,7 @@
                             </div>
                             <p class="card-text">Cremosidade da baunilha com o toque irresistível de chocolate, unidos
                                 em uma combinação clássica e deliciosa.</p>
-                            <button id="item3" type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#staticBackdrop"
+                            <button id="item3" type="button" class="btn btn-primary"
                                 style="font-size: 19px; color: rgb(255, 255, 255);background-color: #5B9CF0;border-color: #5B9CF0; padding: 5px;">
                                 COMPRAR
                             </button>
@@ -214,8 +126,7 @@
                             </div>
                             <p class="card-text">Delicie-se com o Sorvete Napolitano 2L, ideal para compartilhar
                                 momentos doces com a família e amigos!</p>
-                            <button id="item4" type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#staticBackdrop"
+                            <button id="item4" type="button" class="btn btn-primary"
                                 style="font-size: 19px; color: rgb(255, 255, 255);background-color: #5B9CF0;border-color: #5B9CF0; padding: 5px;">
                                 COMPRAR
                             </button>
@@ -233,8 +144,7 @@
                             </div>
                             <p class="card-text">Encontro perfeito entre o sabor marcante do café expresso e a suavidade
                                 do caramelo. Cheio de personalidade!</p>
-                            <button id="item5" type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#staticBackdrop"
+                            <button id="item5" type="button" class="btn btn-primary"
                                 style="font-size: 19px; color: rgb(255, 255, 255);background-color: #5B9CF0;border-color: #5B9CF0; padding: 5px;">
                                 COMPRAR
                             </button>
@@ -252,8 +162,7 @@
                             </div>
                             <p class="card-text">Laranja, Abacaxi OU Morango, combinação cítrica e perfeita para os dias
                                 quentes e para quem ama sabores naturais!</p>
-                            <button id="item6" type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#staticBackdrop"
+                            <button id="item6" type="button" class="btn btn-primary"
                                 style="font-size: 19px; color: rgb(255, 255, 255);background-color: #5B9CF0;border-color: #5B9CF0; padding: 5px;">
                                 COMPRAR
                             </button>

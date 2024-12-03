@@ -69,6 +69,14 @@ a {
     text-decoration: none;
 }
 
+.nav-list p{
+    font-size: 21px;
+    color: white;
+    padding-block: 19.3px;
+    text-decoration: none;
+    margin: 0px;
+}
+
 .hamburger {
     display: none;
     border: none;
@@ -123,10 +131,34 @@ a {
     height: 70vh;
     border-radius: 7px;
     overflow-y: scroll;
+    
 }
 
 #offcanvas-lista::-webkit-scrollbar{
     width: 0px;
+}
+
+#offcanvas-lista li {
+    margin-block: 5px;
+    padding: 5px;
+    border: solid 1px rgb(199, 199, 199);
+    border-radius: 7px;
+    display: grid;
+    grid-template-columns: 45% 10% 25%;
+    gap: 5%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#offcanvas-lista input{
+    height: 40px;
+    border: solid 1px rgb(199, 199, 199);
+    padding-left: 5px;
+    border-radius: 7px;
+}
+
+#offcanvas-lista button{
+    height: 40px;
 }
 
 #offcanvas-resultado {
@@ -210,6 +242,7 @@ a {
 
 #sobre p {
     text-align: justify;
+    margin-inline: 5vw;
 }
 
 /* footer */
