@@ -100,6 +100,11 @@ a {
     --bs-offcanvas-width: 500px;
 }
 
+.offcanvas-header{
+    height: 70px;
+    border-bottom: solid 1px rgb(199, 199, 199);
+}
+
 .offcanvas-body{
     display: flex;
     flex-direction: column;
@@ -165,13 +170,27 @@ a {
     padding-inline: 16px;
 }
 
+.titulo-preco {
+    display: flex;
+    justify-content: space-between;
+}
+
 .tituloproduto{
     text-align: center;
     padding-bottom: 24px;
 }
 
+.preco{
+    color: #f0bc5b;
+    width: 75px;
+}
+
+
 .card-body {
-    min-height: 175px;
+    min-height: 290px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .card-img, .card-img-top {
@@ -269,5 +288,9 @@ a {
     .nav.active .hamburger::after {
         transform: rotate(-135deg);
         top: -7px;
+    }
+
+    .card-body {
+        min-height: 200px;
     }
 }
