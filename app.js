@@ -124,8 +124,7 @@ function atualizarCarrinho() {
     // Atualiza o preço total e a quantidade de produtos
     resultadoCarrinho.innerHTML = `
         <h3>Preço total: R$${total.toFixed(2)}</h3>
-        <p>Total de produtos: ${totalProdutos}</p>
-        <button type="submit" class="btn btn-primary mb-3">Finalizar compra</button>
+        <button type="submit" class="btn btn-primary mb-3" onclick="finalizarCompra()">finalizar compra</button>
     `;
 }
 
