@@ -117,8 +117,8 @@ function atualizarCarrinho() {
         `;
         listaCarrinho.appendChild(li);
 
-        total += item.preco * item.quantidade;
-        totalProdutos += item.quantidade;
+        total += parseFloat(item.preco) * parseInt(item.quantidade) ;
+        totalProdutos += parseInt(item.quantidade);
     });
 
     // Atualiza o preço total e a quantidade de produtos
