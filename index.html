@@ -41,33 +41,35 @@
 
     </div>
 
-    <!-- Modal -->
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Login</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form class="row g-3">
-                        <div class="mb-3">
-                            <label for="ControlInput1" class="form-label">E-mail</label>
-                            <input type="email" class="form-control" id="ControlInput1" placeholder="nome@exemplo.com">
-                        </div>
-                        <div class="col-auto">
-                            <label for="inputPassword2" class="visually-hidden">Senha</label>
-                            <input type="password" class="form-control" id="inputPassword2" placeholder="Senha">
-                        </div>
-                        <div class="col-auto">
-                            <button type="submit" class="btn btn-primary mb-3">Confirmar</button>
-                        </div>
-                    </form>
-                </div>
+<!-- Modal --> 
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Login</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="row g-3" id="loginForm" onsubmit="validateLogin(event)">
+                    <div class="mb-3">
+                        <label for="ControlInput1" class="form-label">E-mail</label>
+                        <input type="email" class="form-control" id="ControlInput1" placeholder="nome@exemplo.com">
+                    </div>
+                    <div class="col-auto">
+                        <label for="inputPassword2" class="visually-hidden">Senha</label>
+                        <input type="password" class="form-control" id="inputPassword2" placeholder="Senha">
+                    </div>
+                    <div class="col-auto">
+                        <button type="submit" class="btn btn-primary mb-3">Confirmar</button>
+                    </div>
+                    <p id="message" style="text-align:center; color:red;"></p> <!-- Mensagem de erro ou sucesso -->
+                </form>
             </div>
         </div>
     </div>
+</div>
+
 
     <!-- carrinho -->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
@@ -123,7 +125,7 @@
     <!-- sobre -->
     <section id="sobre">
         <div>
-            <h1>Os melhores sorvetes da região</h1>
+            <h1 class="titulo-sobre">Os melhores sorvetes da região</h1>
             <p>
                 Qualidade incomparável em cada colherada
                 Na <span style="color: #f0bc5b; font-weight: 800; font-size: 16px;">Crepito</span>, cada sorvete é
@@ -146,7 +148,7 @@
     <!-- produtos -->
     <section id="produtos">
         <div>
-            <h1 class="tituloproduto">Produtos</h1>
+            <h1 class="titulo-produto">Conheça nossos produtos</h1>
             <div class="row row-cols-1 row-cols-md-3 g-4">
                 <div class="col">
                     <div class="card">
