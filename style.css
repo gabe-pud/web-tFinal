@@ -175,9 +175,10 @@ a {
     justify-content: space-between;
 }
 
-.tituloproduto{
+.titulo-produto{
     text-align: center;
     padding-bottom: 24px;
+    padding-top: 24px;
 }
 
 .preco{
@@ -200,15 +201,22 @@ a {
 
 
 /* sobre */
-#sobre {
+.titulo-sobre {
+    padding-top: 28px;
+    padding-bottom: 20px;
+    text-align: center;
     background-color: #fff6e4;
+}
+
+#sobre p {
+    text-align: justify;
 }
 
 /* footer */
 #footer {
-    padding: 30px;
+    padding: 15px;
     background-color: #5B9CF0;
-    margin-top: 100px;
+    margin-top: 150px;
 }
 
 #footer ul {
