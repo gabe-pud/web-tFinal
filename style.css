@@ -304,6 +304,26 @@ a {
     padding-top: 25px;
 }
 
+/* checkout */
+
+#checkout {
+    margin: 25px;
+    width: 50vw;
+    margin: 50px auto;
+    padding: 15px;
+    border-radius: 7px;
+    background-color: white;
+}
+
+#checkout span{
+    width: 80px;
+}
+
+#checkout .col-auto {
+    text-align: center;
+}
+
+
 /* MEDIA */
 @media (max-width: 750px) {
     .hamburger {
@@ -379,5 +399,9 @@ a {
 
     #offcanvas{
         --bs-offcanvas-width: 100vw;
+    }
+
+    #checkout {
+        width: 80vw;
     }
 }
