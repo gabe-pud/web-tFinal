@@ -26,13 +26,19 @@
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#produtos">Produtos</a></li>
-                <li> <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
-                        style="font-size: 21px; color: white; padding: 0px;">
-                        Login
+                <li> <button id="btnLoginLogout" type="button" class="btn" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop"
+                        style="font-size: 21px; color: white; padding: 0px;"><span>Login</span>
                     </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      </ul>
                 </li>
-                <li><button onclick="abrirCarrinho()" class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
-                        aria-controls="offcanvasRight" style="font-size: 21px; color: white; padding: 0px;"><img
+                <li><button id="btnCarrinho" onclick="abrirCarrinho()" disabled class="btn" type="button"
+                        data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvasRight"
+                        style="font-size: 21px; color: white; padding: 0px;border: none;"><img
                             src="imagens\shopping_cart_33dp_E8EAED_FILL0_wght400_GRAD0_opsz40.svg" alt=""></button>
                 </li>
             </ul>
@@ -42,34 +48,34 @@
 
     </div>
 
-<!-- Modal --> 
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-    aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="staticBackdropLabel">Login</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form class="row g-3" id="loginForm" onsubmit="validateLogin(event)">
-                    <div class="mb-3">
-                        <label for="ControlInput1" class="form-label">E-mail</label>
-                        <input type="email" class="form-control" id="ControlInput1" placeholder="nome@exemplo.com">
-                    </div>
-                    <div class="col-auto">
-                        <label for="inputPassword2" class="visually-hidden">Senha</label>
-                        <input type="password" class="form-control" id="inputPassword2" placeholder="Senha">
-                    </div>
-                    <div class="col-auto">
-                        <button type="submit" class="btn btn-primary mb-3">Confirmar</button>
-                    </div>
-                    <p id="message" style="text-align:center; color:red;"></p> <!-- Mensagem de erro ou sucesso -->
-                </form>
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Login</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="row g-3" id="loginForm" onsubmit="validateLogin(event), toggleLoginLogout()">
+                        <div class="mb-3">
+                            <label for="ControlInput1" class="form-label">E-mail</label>
+                            <input type="email" class="form-control" id="ControlInput1" placeholder="nome@exemplo.com">
+                        </div>
+                        <div class="col-auto">
+                            <label for="inputPassword2" class="visually-hidden">Senha</label>
+                            <input type="password" class="form-control" id="inputPassword2" placeholder="Senha">
+                        </div>
+                        <div class="col-auto">
+                            <button type="submit" class="btn btn-primary mb-3">Confirmar</button>
+                        </div>
+                        <p id="message" style="text-align:center; color:red;"></p> <!-- Mensagem de erro ou sucesso -->
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
 
     <!-- carrinho -->

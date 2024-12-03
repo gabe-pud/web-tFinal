@@ -97,7 +97,7 @@ a {
 /* carrinho */
 
 #offcanvas{
-    --bs-offcanvas-width: 500px;
+    --bs-offcanvas-width: 35vw;
 }
 
 .offcanvas-header{
@@ -342,5 +342,9 @@ a {
 
     .card-body {
         min-height: 200px;
+    }
+
+    #offcanvas{
+        --bs-offcanvas-width: 100vw;
     }
 }

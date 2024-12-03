@@ -5,16 +5,10 @@ const nav = document.querySelector(".nav");
 
 hamburger.addEventListener("click", () => nav.classList.toggle("active"));
 
-// login
-
-
-
-// carrinho
-
-
-
 
 // Função de validação do login
+let usuarioLogado = false; // Variável para verificar se o usuário está logado
+
 function validateLogin(event) {
     event.preventDefault(); // Impede o envio do formulário (padrão) para manter a página
 
@@ -32,10 +26,14 @@ function validateLogin(event) {
         message.style.color = 'green';
         message.textContent = 'Sucesso'; // Exibe "Sucesso" em verde
 
-        // Redireciona após 1 segundo
-        setTimeout(() => {
-            window.location.href = 'index.html'; // Redireciona para a página principal
-        }, 1000); // O redirecionamento ocorre após 1 segundo para que a mensagem de "Sucesso" seja visível
+        usuarioLogado = true;  // Marca como logado
+        alert("Login bem-sucedido!");
+        document.getElementById("btnCarrinho").disabled = false; // Habilita o botão do carrinho
+        var myModalEl = document.getElementById('staticBackdrop');
+        var modal = bootstrap.Modal.getInstance(myModalEl)
+        modal.hide();
+        var login = document.getElementById("btnLoginLogout");
+        login.innerText = "Logout"
     } else {
         message.style.color = 'red';
         message.textContent = 'Usuário ou senha inválidos'; // Exibe mensagem de erro
@@ -43,9 +41,10 @@ function validateLogin(event) {
 }
 
 
+// carrinho
+
 // Array para armazenar os produtos no carrinho
 let carrinho = [];
-let usuarioLogado = false; // Variável para verificar se o usuário está logado
 
 // Função para adicionar um item ao carrinho
 function adicionarAoCarrinho(produto, preco) {
@@ -72,7 +71,7 @@ function adicionarAoCarrinho(produto, preco) {
 function removerDoCarrinho(produto) {
     // Remove o item do carrinho
     carrinho = carrinho.filter(item => item.produto !== produto);
-    
+
     // Atualiza o carrinho e o valor total
     atualizarCarrinho();
 }
@@ -81,7 +80,7 @@ function removerDoCarrinho(produto) {
 function alterarQuantidade(produto, quantidade) {
     // Encontra o item no carrinho e altera a quantidade
     let item = carrinho.find(item => item.produto === produto);
-    
+
     if (item) {
         // Se a quantidade for maior que 0, atualiza
         if (quantidade > 0) {
@@ -100,7 +99,7 @@ function alterarQuantidade(produto, quantidade) {
 function atualizarCarrinho() {
     let listaCarrinho = document.getElementById('offcanvas-lista');
     let resultadoCarrinho = document.getElementById('offcanvas-resultado');
-    
+
     listaCarrinho.innerHTML = ''; // Limpa a lista de produtos no carrinho
 
     let total = 0;
@@ -130,61 +129,32 @@ function atualizarCarrinho() {
     `;
 }
 
-// Função para abrir o carrinho (verifica se o usuário está logado)
-function abrirCarrinho() {
-    if (usuarioLogado) {
-        // Se o usuário estiver logado, abre o carrinho
-        let offcanvas = new bootstrap.Offcanvas(document.getElementById('offcanvas'));
-        offcanvas.show();
-    } else {
-        alert("Você precisa estar logado para acessar o carrinho.");
-    }
-}
-
-// Função para fazer login (simulação de um login básico)
-function fazerLogin() {
-    // Lógica de login simples para o exemplo
-    let email = prompt("Digite seu email:");
-    let senha = prompt("Digite sua senha:");
-
-    // Simulando um login de sucesso
-    if (email === "gabrielgarcia@fatec.com" && senha === "leviferreira") {
-        usuarioLogado = true;  // Marca como logado
-        alert("Login bem-sucedido!");
-        document.getElementById("btnCarrinho").disabled = false; // Habilita o botão do carrinho
-    } else {
-        alert("Usuário ou senha inválidos!");
-    }
-}
 
 // Função para adicionar eventos aos botões "COMPRAR"
 function adicionarEventos() {
-    document.getElementById('item1').addEventListener('click', function() {
+    document.getElementById('item1').addEventListener('click', function () {
         adicionarAoCarrinho('Mini Napolitano', 12.99);
     });
 
-    document.getElementById('item2').addEventListener('click', function() {
+    document.getElementById('item2').addEventListener('click', function () {
         adicionarAoCarrinho('Chocolate, Morango OU Pistache', 19.99);
     });
 
-    document.getElementById('item3').addEventListener('click', function() {
+    document.getElementById('item3').addEventListener('click', function () {
         adicionarAoCarrinho('Baunilha C/ Chocolate', 12.99);
     });
 
-    document.getElementById('item4').addEventListener('click', function() {
+    document.getElementById('item4').addEventListener('click', function () {
         adicionarAoCarrinho('NAPOLITANO 2L', 24.99);
     });
 
-    document.getElementById('item5').addEventListener('click', function() {
+    document.getElementById('item5').addEventListener('click', function () {
         adicionarAoCarrinho('Expresso Caramelizado', 14.99);
     });
 
-    document.getElementById('item6').addEventListener('click', function() {
+    document.getElementById('item6').addEventListener('click', function () {
         adicionarAoCarrinho('Laranja, Abacaxi OU Morango', 6.99);
     });
-
-    // Evento para o botão do carrinho
-    document.getElementById('btnCarrinho').addEventListener('click', abrirCarrinho);
 }
 
 // Chama a função para adicionar eventos ao carregar a página
