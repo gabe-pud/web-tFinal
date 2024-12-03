@@ -187,19 +187,61 @@ a {
 
 /* footer */
 #footer {
-    padding: 20px;
+    padding: 30px;
     background-color: #5B9CF0;
-    margin-top: 30px;
-    text-align: center;
-    text-decoration: none;
+    margin-top: 100px;
 }
 
 #footer ul {
+    padding: 0px;
     display: flex;
-    gap: 32px;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+    margin: 0px;
+}
+#footer li {
+    list-style: none;
+}
+
+#footer a {
     text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+   
+}
+
+#footer p {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-top: 15px;
+}
+
+.div-footer {
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    padding-inline: 200px;
+    margin: 0 auto;
+}
+
+.contatos {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+}
+
+.direitos {
+    justify-content: center;
+    text-align: center;
+    padding-top: 25px;
 }
 
 /* MEDIA */
